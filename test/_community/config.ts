@@ -3,9 +3,11 @@ import { devUser } from '../credentials'
 import { MediaCollection } from './collections/Media'
 import { PostsCollection, postsSlug } from './collections/Posts'
 import { MenuGlobal } from './globals/Menu'
+import { lexicalEditor } from '../../packages/richtext-lexical/src'
 
 export default buildConfigWithDefaults({
   // ...extend config here
+  editor: lexicalEditor({}),
   collections: [
     PostsCollection,
     MediaCollection,
