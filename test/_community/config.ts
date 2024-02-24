@@ -1,3 +1,4 @@
+import { lexicalEditor } from '../../packages/richtext-lexical/src'
 import { buildConfigWithDefaults } from '../buildConfigWithDefaults'
 import { devUser } from '../credentials'
 import { MediaCollection } from './collections/Media'
@@ -6,6 +7,7 @@ import { MenuGlobal } from './globals/Menu'
 
 export default buildConfigWithDefaults({
   // ...extend config here
+  editor: lexicalEditor({}),
   collections: [
     PostsCollection,
     MediaCollection,
