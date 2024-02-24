@@ -12,7 +12,7 @@ export const PostsCollection: CollectionConfig = {
       type: 'richText',
       editor: lexicalEditor({
         features: ({ defaultFeatures }) => [
-          ...defaultFeatures.filter((feature) => feature.key !== 'upload'),
+          ...defaultFeatures,
           BlocksFeature({
             blocks: [TestBlock],
           }),
